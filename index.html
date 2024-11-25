@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem de Amor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fundo animado com corações -->
+  <div class="background">  
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <!-- Navegação de frases -->
+  <div id="carousel">
+    <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+    <div class="slides">
+      <!-- Slide com espaço para imagem -->
+      <div class="slide">
+        <img src="nós.jpeg" alt="Imagem 1" class="slide-image">
+        <p class="caption">"Você é a razão do meu sorriso."</p>
+      </div>
+      <div class="slide">
+        <img src="pizzaria.jpeg" alt="Imagem 2" class="slide-image">
+        <p class="caption">"Cada momento ao seu lado é especial."</p>
+      </div>
+      <div class="slide">
+        <img src="curitiba.jpeg" alt="Imagem 3" class="slide-image">
+        <p class="caption">"Meu mundo é mais colorido com você."</p>
+      </div>
+      <div class="slide">
+        <img src="bosque.jpeg" alt="Imagem 4" class="slide-image">
+        <p class="caption">"Você é o meu sonho realizado."</p>
+      </div>
+      <div class="slide">
+        <img src="shopping.jpeg" alt="Imagem 5" class="slide-image">
+        <p class="caption">"Te amar é minha maior alegria."</p>
+      </div>
+      <div class="slide">
+        <img src="careta.jpeg" alt="Imagem 6" class="slide-image">
+        <p class="caption">"Você é minha luz nas noites escuras."</p>
+      </div>
+      <div class="slide">
+        <img src="moto.jpeg" alt="Imagem 7" class="slide-image">
+        <p class="caption">"Tudo com a sua companhia é melhor."</p>
+      </div>
+      <div class="slide">
+        <img src="peixe.jpeg" alt="Imagem 8" class="slide-image">
+        <p class="caption">"E mais engraçado também."</p>
+      </div>
+      <!-- Último slide com "EU TE AMO" -->
+      <div class="slide last-slide">
+        <p class="final-message">EU TE AMO! VOCÊ É E SEMPRE SERÁ TUDO PRA MIM</p>
+      </div>
+    </div>
+    <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

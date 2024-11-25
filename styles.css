@@ -1,0 +1,145 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ffccf9, #ffc8dd); /* Gradiente rosa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Fundo animado */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* Estilo dos corações */
+  .heart {
+    position: absolute;
+    width: 30px; /* Largura ajustada */
+    height: 30px; /* Altura ajustada */
+    background: red;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    animation: fall 5s infinite linear, sway 3s infinite ease-in-out;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    width: 30px;
+    height: 30px;
+    top: -15px; /* Ajustado para arredondar melhor */
+    left: 0;
+  }
+  
+  .heart::after {
+    width: 30px;
+    height: 30px;
+    left: 15px; /* Ajustado para alinhar as bordas */
+    top: 0;
+  }
+  
+  /* Corações em posições aleatórias */
+  .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+  .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+  .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+  .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+  .heart:nth-child(6) { left: 60%; animation-delay: 0.5s; }
+  .heart:nth-child(7) { left: 70%; animation-delay: 1.5s; }
+  .heart:nth-child(8) { left: 80%; animation-delay: 2.5s; }
+  .heart:nth-child(9) { left: 90%; animation-delay: 3.5s; }
+  
+  /* Animação da queda */
+  @keyframes fall {
+    0% {
+      top: -10%;
+      transform: scale(0.7) rotate(0deg);
+    }
+    100% {
+      top: 110%;
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  
+  /* Animação de oscilação */
+  @keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+  
+  /* Navegação */
+  #carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  .slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .slide {
+    display: none;
+  }
+  .slide-image {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  .caption {
+    font-size: 1.5em;
+    color: #ff007f; /* Rosa vibrante */
+  }
+  .arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #ff0000;
+  }
+  .arrow.left {
+    position: absolute;
+    left: 10px;
+  }
+  .arrow.right {
+    position: absolute;
+    right: 10px;
+  }
+  
+  /* Último slide */
+  .last-slide {
+    text-align: center;
+  }
+  .final-message {
+    font-size: 3em;
+    color: red;
+    font-family: 'Impact', sans-serif;
+  }
+  
